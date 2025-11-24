@@ -644,6 +644,14 @@ config MCHP_LAN966X_PCI
 	    - lan966x-miim (MDIO_MSCC_MIIM)
 	    - lan966x-switch (LAN966X_SWITCH)
 
+config QCOM_DCC
+	tristate "Qualcomm Technologies, Inc. Data Capture and Compare (DCC) engine driver"
+	depends on ARCH_QCOM || COMPILE_TEST
+	help
+	  This option enables the driver for the Data Capture and Compare engine. DCC
+	  driver provides interfaces to configure DCC block and read back the captured
+	  data from the DCC's internal SRAM. The module name for this is qcom-dcc.
+
 source "drivers/misc/c2port/Kconfig"
 source "drivers/misc/eeprom/Kconfig"
 source "drivers/misc/cb710/Kconfig"
